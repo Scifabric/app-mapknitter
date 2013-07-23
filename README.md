@@ -71,4 +71,4 @@ Please, see the COPYING file.
 
 Acknowledgments
 ===============
-The thumbnail has been created using a [photo](http://www.flickr.com/photos/infomatique/5489548540/) from William Murphy (license CC¬BY-SA 2.0).
+The thumbnail has been created using a [photo](http://www.flickr.com/photos/bulle_de/4672972586/) from Christopher Bulle (license CC¬BY 2.0).
