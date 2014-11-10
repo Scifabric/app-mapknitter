@@ -83,25 +83,30 @@
           <p>You can also draw a polygon to measure the size of the tents</p>
 
       </div>
-      <div id="controls" class="btn-group btn-group-sm" data-toggle="buttons" style="padding-bottom:5px;">
+      <div class="btn-toolbar">
+        <div id="controls" class="btn-group btn-group-sm" data-toggle="buttons">
           <label id="navigate" class="btn btn-default btn-map-ctrl">
-            <input name="options" type="radio" checked>Navigate
-        </label>
-        <label id="polygon" class="btn btn-default btn-map-ctrl">
-            <input name="options" type="radio">Polygon
-        </label>
-        <label id="point" class="btn btn-default btn-map-ctrl ">
-            <input name="options" type="radio">Point
-        </label>
-        <label id="modify"    class="btn btn-default btn-map-ctrl ">
-          <input type="radio" name="options">Edit 
-        </label>
-        <label id="delete"    class="btn btn-default btn-map-ctrl ">
-          <input name="options" type="radio"> Delete
-        </label>
-      </div>
+              <input name="options" type="radio" checked>Navigate
+          </label>
+          <label id="polygon" class="btn btn-default btn-map-ctrl">
+              <input name="options" type="radio">Polygon
+          </label>
+          <label id="point" class="btn btn-default btn-map-ctrl ">
+              <input name="options" type="radio">Point
+          </label>
+          <label id="modify"    class="btn btn-default btn-map-ctrl ">
+            <input type="radio" name="options">Edit 
+          </label>
+          <label id="delete"    class="btn btn-default btn-map-ctrl ">
+            <input name="options" type="radio"> Delete
+          </label>
+        </div>
+        <div class="btn-group btn-group-sm">
+            <button id="answerbtn" class="btn btn-primary btn-submit" value="coordinates" style="display:none"><i class="icon-check icon-white"></i> Save these the polygons or points</button>
 
-      <button id="answerbtn" class="btn btn-success btn-submit" value="coordinates" style="display:none"><i class="icon-check icon-white"></i> Save these the polygons or points</button>
+        </div>
+      </div>
+      <div style="margin-top:50px;">
           <p>You are working on task: <span id="task-id" class="label label-warning"></span>
           <a href="../tutorial" class="btn btn-primary pull-right" style="margin-left:-15px;">Tutorial</a>
           </p>
