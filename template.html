@@ -1,36 +1,42 @@
 <! -- Fix for Bootstrap css with Google Maps https://github.com/twitter/bootstrap/issues/1552 -->
-<style type="text/css">
-    .map_canvas label {
-        width: auto;
-        display: inline;
-    }
-    .map_canvas img {
-        max-width: none;
-    }
+ <style type="text/css">
+.map_canvas label {
+    width: auto;
+    display: inline;
+}
+.map_canvas img {
+    max-width: none;
+}
 
-    .olImageLoadError { 
-        /* when OL encounters a 404, don't display the pink image */
-        display: none !important;
-    } 
+.olImageLoadError { 
+    /* when OL encounters a 404, don't display the pink image */
+    display: none !important;
+} 
 
-    #loading{
-        position:absolute;
-        z-index: 10000;
-        width: 100%;
-        height: 100%;
-        margin-top: 0px;
-        margin-left: 0px;
-        background-color: rgba(255,255,255,1);
-    }
+#loading{
+    position:absolute;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: rgba(255,255,255,1);
+}
 
-    #facts {
-        position: relative;
-        margin-top:200px;
-    }
+#facts {
+    position: relative;
+    margin-top:200px;
+}
 
-    .layersDiv label {
-        color: white;
-    }
+.layersDiv label {
+    color: white;
+}
+
+.olTileImage {
+    max-width: none !important;
+}
+
+
 </style>
 
 <div id="loading" style="display:none">
