@@ -272,12 +272,25 @@ pybossa.taskLoaded(function(task, deferred){
         // Black color for the path and polygon control to integrate with black controls
         // and inverse Bootstrap color scheme
         var styleBlack = new OpenLayers.StyleMap({
-            pointRadius: 5,
-            fillColor: "rgba(0,0,0,0.5)",
-            strokeColor: "rgba(0,0,0,1)",
-            strokeWidth: 2,
+                "default": new OpenLayers.Style({
+                        pointRadius: 5,
+                        fillColor: "rgba(0,0,0,0.5)",
+                        strokeColor: "rgba(0,0,0,1)",
+                        strokeWidth: 2,
+                    }),
+                "select": new OpenLayers.Style({
+                        pointRadius: 5,
+                        fillColor: "rgba(255,255,255,0.5)",
+                        strokeColor: "rgba(255,255,255,1)",
+                        strokeWidth: 2,
+                    }),
+                "temporary": new OpenLayers.Style({
+                        pointRadius: 5,
+                        fillColor: "rgba(255,255,255,0.5)",
+                        strokeColor: "rgba(255,255,255,1)",
+                        strokeWidth: 2,
+                    })
         });
-
 
         task.areaLayer = new OpenLayers.Layer.Vector("Area Layer", {
             styleMap: styleBlack
