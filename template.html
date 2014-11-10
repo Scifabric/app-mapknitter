@@ -35,7 +35,7 @@
 
 <div id="loading" style="display:none">
       <div class="row">
-          <div class="span12">
+          <div class="col-md-12">
               <div id="facts" class="alert alert-info">
                   Loading task...
               </div>
@@ -48,7 +48,7 @@
 
 <div class="row">
     <!-- Success and Error Messages for the user --> 
-    <div class="span12" style="height:50px">
+    <div class="col-md-12" style="height:50px">
         <div id="success" class="alert alert-success" style="display:none;">
             <a class="close">×</a>
             <strong>Well done!</strong> Your answer has been saved
@@ -77,31 +77,28 @@
 
 <div id="maps" class="row">
     <!--<div style="font-size:10px;">Marker Icons by <a href="http://mapicons.nicolasmollet.com/">Nicolas Mollet</a></div>-->
-    <div id="answer" class="skeleton span10">
+    <div id="answer" class="skeleton col-md-10">
       <div id="question">
           <h1>Add a point per camping tent</h1>
           <p>You can also draw a polygon to measure the size of the tents</p>
 
       </div>
-      <div id="controls" class="btn-group" data-toggle="buttons-radio" style="padding-bottom:5px;">
-        <button id="navigate" class="btn btn-inverse btn-map-ctrl">
-          <i class="icon icon-white icon-move"></i> Navigate
-        </button>
-        <button id="polygon"  class="btn btn-inverse btn-map-ctrl ">
-          <i class="icon icon-white icon-map-marker"></i> Polygon
-        </button>
-        <!-- <button id="polygon"  class="btn btn-inverse" onClick="toggleControl('path');">
-          <i class="icon icon-white icon-pencil"></i> Line-->
-        </button>
-        <button id="point"    class="btn btn-inverse btn-map-ctrl ">
-          <i class="icon icon-white icon-flag"></i> Point
-        </button>
-        <button id="modify"    class="btn btn-inverse btn-map-ctrl ">
-          <i class="icon icon-white icon-edit"></i> Edit 
-        </button>
-        <button id="delete"    class="btn btn-inverse btn-map-ctrl ">
-          <i class="icon icon-white icon-trash"></i> Delete
-        </button>
+      <div id="controls" class="btn-group btn-group-sm" data-toggle="buttons" style="padding-bottom:5px;">
+          <label id="navigate" class="btn btn-default btn-map-ctrl">
+            <input name="options" type="radio" checked>Navigate
+        </label>
+        <label id="polygon" class="btn btn-default btn-map-ctrl">
+            <input name="options" type="radio">Polygon
+        </label>
+        <label id="point" class="btn btn-default btn-map-ctrl ">
+            <input name="options" type="radio">Point
+        </label>
+        <label id="modify"    class="btn btn-default btn-map-ctrl ">
+          <input type="radio" name="options">Edit 
+        </label>
+        <label id="delete"    class="btn btn-default btn-map-ctrl ">
+          <input name="options" type="radio"> Delete
+        </label>
       </div>
 
       <button id="answerbtn" class="btn btn-success btn-submit" value="coordinates" style="display:none"><i class="icon-check icon-white"></i> Save these the polygons or points</button>
@@ -118,7 +115,7 @@
 </div>
 <div class="row">
     <hr>
-    <div id="disqus_thread" class="span12"></div>
+    <div id="disqus_thread" class="col-md-12"></div>
 </div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -209,7 +206,7 @@ function loadUserProgress() {
 
 pybossa.taskLoaded(function(task, deferred){
     if ( !$.isEmptyObject(task) ) {
-        var map_div = $("<div/>", {id:"map_task_" + task.id, 'class': 'span4'});
+        var map_div = $("<div/>", {id:"map_task_" + task.id, 'class': 'col-md-4'});
         var map_canvas = $("<div/>", {id: "map_" + task.id, 'class': 'map_canvas'});
         map_canvas.css("width", "780px");
         map_canvas.css("height", "410px");
